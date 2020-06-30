@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>Julian Date</title>
+</head>
+<body>
+	<div id="header" class="header">
+	<h1 id="h1" class="h1`">Julian Date Converter</h1>
+	</div>
+	<br>
+    <div id="jd" class="jd"> 
+        <form>
+            <p id="">Enter date desire to convert to Julian Date:</p>
+            <label id="labelDate" class="labelDate" for="date">Enter Date</label>
+            <input type="date" id="inputDate" name="date" value="inputDate" min="1969-12-31" required><br>
+			<p id="result" class="result">Julian-Date:<span id="span" class="span"> 00000</span></p>
+		</form>
+		<br>
+		<form>    
+            <p>Enter Julian Date desire to convert to regular date:</p>
+            <label id="julianDate" class="julianDate" for="date">Enter Julian Date</label>
+            <input type="number" id="inputJdate" name="julianDate" value="inputJdate" size="13" minlength="5" maxlength="5" required>
+            <p id="result2" class="result2">Julian-Date:<span id="span2" class="span2"> 06/06/1983</span></p>
+        </form>
+	</div>
+	<script src="/app.js"></script>
+</body>
+</html>
