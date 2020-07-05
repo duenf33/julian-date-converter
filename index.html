@@ -20,11 +20,11 @@
 		<div>
 			<!-- chosen year is only an example to be able to see output on page -->
 			<p>Chosen year: <span id="year">year</span></p> 
-        <form>
+        <form onsubmit="setDate()">
 			<p id="">Enter date desire to convert to Julian Date:</p>
 			<button id="labelDate" class="labelDate">Enter Date</button>
             <!-- <label id="labelDate" class="labelDate" for="date">Enter Date</label> -->
-            <input type="date" id="inputDate" name="date" value="inputDate" min="1969-12-31" required><br>
+            <input type="date" id="inputDate" name="date" placeholder="yyyy / mm / dd"  min="1969-12-31" required><br>
 			<p id="result" class="result">Julian-Date:<span id="span" class="span">0000</span></p>
 		</form>
 		<br>
