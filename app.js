@@ -39,6 +39,10 @@ labelDate.addEventListener('click', btn1);
           { month: dec = range(335, 366)}
         ]
     ];
+    // const month = minus1;
+    // console.log(month);
+    // console.log(bigB[0].indexOf(month[5]));
+
     const inputValue = inputDate.value;
     if (inputValue === '') {
       alert('Enter Date');
@@ -46,21 +50,27 @@ labelDate.addEventListener('click', btn1);
     } else {
       inputDate.value = '';
     }
+    const month1 = inputValue.substr(5, 2);  // grabbing the 2 month digits from the input date.
+    const monthValue = parseInt(month1, 10);  // converting the input month string to number.
+    console.log(monthValue);
+    const date1 = inputValue.substr(8, 2);
+    console.log(inputValue);
+    const date1Value = parseInt(date1, 10);
+    console.log(date1Value);
 
     const yearOnly = inputValue.substr(0, 4);  // grabbing only the 4 digit year from the input date.
-    const yearOnlyNum = parseInt(yearOnly, 10);   // converting the input year string to number.
+    const yearOnlyNum = parseInt(yearOnly, 10);   // converting the input year string to number.the full 4 digits of the year "2020".
     const foo = [];               // Loop years from 1970 to 2040 counting by 4 for leap year.
     // console.log(foo);
-    for (var i = 1972; i <= 2040; i += 4) {
+    for (let i = 1972; i <= 2040; i += 4) {
         foo.push(i);
     }
-    const yearCrop = inputValue.substr(2, 2);
-    const yearCropNum = parseInt(yearCrop, 10);
-    console.log(yearCrop);
-    console.log(yearCropNum);
-    console.log(yearOnlyNum);
+    const yearCrop = inputValue.substr(2, 2);   //year last 2 digits as a integer "20".
+    const yearCropNum = parseInt(yearCrop, 10); //year last 2 digits converted to number "20".
+    console.log(yearCrop);    
+    console.log(yearCropNum); 
+    console.log(yearOnlyNum); 
     year.innerHTML = foo[2];
-    console.log(foo.length);
     const n = foo.includes(yearOnlyNum)  //used includes to be able to see if yearOnlyNum was in array.
       while (n === true) {    //includes gives out a true or false.
         console.log(n);
@@ -72,43 +82,38 @@ labelDate.addEventListener('click', btn1);
         noleap();
         break;
       }
+      function range(start, end) {
+        var foo2 = [];
+        for (let i = start; i <= end; i++) {
+            foo2.push(i);
+        }
+        return foo2;
+    }
+    span.innerHTML = sep[5];
 
-    function cool() {
-      const month1 = inputValue.substr(5, 2);  // grabbing the 2 month digits from the input date.
-      const monthValue = parseInt(month1, 10);  // converting the input month string to number.
-      console.log(monthValue);
-      const date1 = inputValue.substr(8, 2);
-      console.log(inputValue);
-      const date1Value = parseInt(date1, 10);
-      console.log(date1Value);
-    }      
+
+    bigB[0].forEach(function(item1, index1, array1){
+      while (index1 === monthValue) {
+        const minus1 = index1 - 1;
+        console.log(minus1);
+        // range(minus1);
+        // console.log(minus1[date1Value]);
+        break;
+      }
+    })
+
 
     function leap() {
       console.log("Leap Year!!!!!")
-      cool();
+      console.log(date1Value);
+      // console.log(minus1);
 
-      console.log(date1Value);    //Uncaught ReferenceError: date1Value is not defined
-      // leap http://127.0.0.1:5500/app.js:89
-      // btn1 http://127.0.0.1:5500/app.js:67
-
-      bigB[0].forEach(function(item1, index1, array1){
-        while (index1 === monthValue) {
-          const minus1 = index1 - 1;
-          // console.log(minus1);
-          range(minus1);
-          // console.log(minus1[date1Value]);
-          break;
-        }
-      })
     }
     function noleap() {
       console.log("NOOOO  Leap Year.")
-      cool();
-
-      console.log(monthValue);    //Uncaught ReferenceError: monthValue is not defined
-      // noleap http://127.0.0.1:5500/app.js:107
-      // btn1 http://127.0.0.1:5500/app.js:72
-
+      // cool();
+      // console.log(minus1);
+      console.log(monthValue);    
       console.log(date1Value);
       // bigB[1].forEach(function(item3, index3, array3){  //forEach to compare index from bigD to the monthvalue
         // console.log(index3);
@@ -127,6 +132,8 @@ labelDate.addEventListener('click', btn1);
         // }
       // })
     }
+
+ 
 // //----------------------------------------------
 //       for (let elem in obj) {
 //         console.log(`${elem} = ${obj[elem]}`);
@@ -155,15 +162,5 @@ labelDate.addEventListener('click', btn1);
       //   return foo === yearOnlyNum;
       // }
       // const example = foo.find(checkList);   // find() function is comparing the input year with foo in order to see if its a leap year or not    //when not leap year it becomes a 'undefined' value. does not work.
-      // const example2 = parseInt(example, 10);
-
-            
+      // const example2 = parseInt(example, 10);            
   }
-        function range(start, end) {
-            var foo2 = [];
-            for (var i = start; i <= end; i++) {
-                foo2.push(i);
-            }
-            return foo2;
-        }
-    // span.innerHTML = sep[5];
