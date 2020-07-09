@@ -39,6 +39,18 @@ labelDate.addEventListener('click', btn1);
           { month: dec = range(335, 366)}
         ]
     ];
+
+    const months = [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec];
+    console.log(months.length);
+    console.log(months);
+    for (let i = 1 ; i <= months.length ; i++) {
+      console.log(i);
+      console.log(months[0]);
+      var tuck = months[0];
+      console.log(tuck[range()]);
+      
+    }
+
     // const month = minus1;
     // console.log(month);
     // console.log(bigB[0].indexOf(month[5]));
@@ -52,6 +64,8 @@ labelDate.addEventListener('click', btn1);
     }
     const month1 = inputValue.substr(5, 2);  // grabbing the 2 month digits from the input date.
     const monthValue = parseInt(month1, 10);  // converting the input month string to number.
+    const monthVminus1 = monthValue - 1;
+    console.log(monthVminus1);
     console.log(monthValue);
     const date1 = inputValue.substr(8, 2);
     console.log(inputValue);
@@ -75,27 +89,80 @@ labelDate.addEventListener('click', btn1);
       while (n === true) {    //includes gives out a true or false.
         console.log(n);
         leap();
+        bigB[0].forEach();
         break;    //always use break or it will never end and crash browser.
       }
       while (n === false) {
         console.log(n);
         noleap();
+        bigB[1].forEach();
         break;
       }
       function range(start, end) {
-        var foo2 = [];
+        var foo2 = [];        
         for (let i = start; i <= end; i++) {
             foo2.push(i);
+            // console.log(foo2);
+            // console.log(i);
         }
         return foo2;
-    }
-    span.innerHTML = sep[5];
+      }
+      
+    span.innerHTML = may[1];
 
 
     bigB[0].forEach(function(item1, index1, array1){
-      while (index1 === monthValue) {
-        const minus1 = index1 - 1;
-        console.log(minus1);
+      console.log(index1);
+      console.log(monthVminus1);
+      while (index1 === monthVminus1) {
+        var mo = sep;
+        var setup = mo[date1Value]; 
+        
+        console.log(monthVminus1);
+        console.log(monthVminus1, index1, range(setup, setup));
+
+        // item1.forEach(function(item2, index2, array2) {
+        //   while (index2 === date1Value) {
+        //     console.log(index2);
+        //   }
+        // })
+
+        // for (let i = 0 ; i <= item1.lenght ; i++) {
+        //   console.log(item1[i]);
+        // }
+
+        // console.log(item1);
+        // console.log(array1);
+        // range(item1, item1);
+        // range(minus1);
+        // console.log(minus1[date1Value]);
+        break;
+      }
+    })
+
+    bigB[1].forEach(function(item1, index1, array1){
+      console.log(index1);
+      console.log(monthVminus1);
+      while (index1 === monthVminus1) {
+        var mo = jan;
+        var setup = mo[date1Value]; 
+        
+        console.log(monthVminus1);
+        console.log(monthVminus1, index1, range(setup, setup));
+
+        // item1.forEach(function(item2, index2, array2) {
+        //   while (index2 === date1Value) {
+        //     console.log(index2);
+        //   }
+        // })
+
+        // for (let i = 0 ; i <= item1.lenght ; i++) {
+        //   console.log(item1[i]);
+        // }
+
+        // console.log(item1);
+        // console.log(array1);
+        // range(item1, item1);
         // range(minus1);
         // console.log(minus1[date1Value]);
         break;
