@@ -40,16 +40,67 @@ labelDate.addEventListener('click', btn1);
         ]
     ];
 
-    const months = [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec];
-    console.log(months.length);
-    console.log(months);
-    for (let i = 1 ; i <= months.length ; i++) {
-      console.log(i);
-      console.log(months[0]);
-      var tuck = months[0];
-      console.log(tuck[range()]);
+    // const mont = [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec];
+    // console.log(mont.length);
+    // console.log(mont);
+    // for (let i = 1 ; i <= mont.length ; i++) {
+      // console.log(i);
+      // console.log(mont[6]);
+      // var tuck = mont[0];
+      // console.log(tuck[range()]);
       
+    // }
+
+
+    const object1 = [
+    {
+      a: 'somestring',
+      b: 42,
+      c: 5,
+      d: janes1 = range(0, 42)
+    },
+    {
+      a: 'somethig different',
+      b: 50,
+      c: 1,
+      d: janes2 = range(42, 132)
+    },
+    {
+      a: 'i dont know',
+      b: 42,
+      c: 19,
+      d: janes3 = range(132, 200)
     }
+  ];
+    console.log(object1);
+    console.log(object1[2]);
+    console.log(object1[1]);
+    console.log(object1[0]);
+    console.log(Object.values(object1));
+
+    const objArray = [];
+    const objEx = Object.values(object1[1]);
+    console.log(objEx);   //It allows to open one array to access the object content of 4.
+    console.log(objEx[3]);
+    const objEx2 = objEx[3];
+    console.log(objEx2[65]);
+    const obj = objArray.push(Object.values(object1[1]));
+    
+    console.log(obj);
+    console.log(obj[2]);
+    console.log(objArray);  //It allows to open an array then another array to access object content of 4.
+    const objArray2 = [];
+    const obj2 = objArray2.push(Object.values(janes2));
+    console.log(obj2);
+    console.log(objArray2);    
+    // console.log(jane2);
+    
+
+
+    for (const [key, value] of Object.entries(object1)) {
+      console.log(`${key}: ${value}`);
+    }
+
 
     // const month = minus1;
     // console.log(month);
@@ -89,13 +140,13 @@ labelDate.addEventListener('click', btn1);
       while (n === true) {    //includes gives out a true or false.
         console.log(n);
         leap();
-        bigB[0].forEach();
+        // bigB[0].forEach();
         break;    //always use break or it will never end and crash browser.
       }
       while (n === false) {
         console.log(n);
         noleap();
-        bigB[1].forEach();
+        // bigB[1].forEach();
         break;
       }
       function range(start, end) {
