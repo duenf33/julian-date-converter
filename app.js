@@ -9,21 +9,21 @@ const d = new Date();
 todaysDate.innerHTML = d.toDateString();
 labelDate.addEventListener('click', btn1);
   function btn1() {
-    const bigB = [
+    // const bigB = [
       jd = [
-          { month: jan = range(0, 31)},
-          { month: feb = range(31, 59)},
-          { month: mar = range(59, 90)},
-          { month: apr = range(90, 120)},
-          { month: may = range(120, 151)},
-          { month: jun = range(151, 181)},
-          { month: jul = range(181, 212)},
-          { month: aug = range(212, 243)},
-          { month: sep = range(243, 273)},
-          { month: oct = range(273, 304)},
-          { month: nov = range(304, 334)},
-          { month: dec = range(334, 365)}
-        ],
+          { monthA: jan = range(0, 31)},
+          { monthB: feb = range(31, 59)},
+          { monthC: mar = range(59, 90)},
+          { monthD: apr = range(90, 120)},
+          { monthE: may = range(120, 151)},
+          { monthF: jun = range(151, 181)},
+          { monthG: jul = range(181, 212)},
+          { monthH: aug = range(212, 243)},
+          { monthI: sep = range(243, 273)},
+          { monthJ: oct = range(273, 304)},
+          { monthK: nov = range(304, 334)},
+          { monthL: dec = range(334, 365)}
+        ];
       jdly = [
           { month: jan = range(0, 31)},
           { month: feb = range(31, 60)},
@@ -37,8 +37,9 @@ labelDate.addEventListener('click', btn1);
           { month: oct = range(274, 305)},
           { month: nov = range(305, 335)},
           { month: dec = range(335, 366)}
-        ]
-    ];
+        ];
+
+    // ];
 
     // const mont = [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec];
     // console.log(mont.length);
@@ -52,54 +53,54 @@ labelDate.addEventListener('click', btn1);
     // }
 
 
-    const object1 = [
-    {
-      a: 'somestring',
-      b: 42,
-      c: 5,
-      d: janes1 = range(0, 42)
-    },
-    {
-      a: 'somethig different',
-      b: 50,
-      c: 1,
-      d: janes2 = range(42, 132)
-    },
-    {
-      a: 'i dont know',
-      b: 42,
-      c: 19,
-      d: janes3 = range(132, 200)
-    }
-  ];
-    console.log(object1);
-    console.log(object1[2]);
-    console.log(object1[1]);
-    console.log(object1[0]);
-    console.log(Object.values(object1));
+  //   const object1 = [
+  //   {
+  //     a: 'somestring',
+  //     b: 42,
+  //     c: 5,
+  //     d: janes1 = range(0, 42)
+  //   },
+  //   {
+  //     a: 'somethig different',
+  //     b: 50,
+  //     c: 1,
+  //     d: janes2 = range(42, 132)
+  //   },
+  //   {
+  //     a: 'i dont know',
+  //     b: 42,
+  //     c: 19,
+  //     d: janes3 = range(132, 200)
+  //   }
+  // ];
+  //   console.log(object1);
+  //   console.log(object1[2]);
+  //   console.log(object1[1]);
+  //   console.log(object1[0]);
+  //   console.log(Object.values(object1));
 
-    const objArray = [];
-    const objEx = Object.values(object1[1]);
-    console.log(objEx);   //It allows to open one array to access the object content of 4.
-    console.log(objEx[3]);
-    const objEx2 = objEx[3];
-    console.log(objEx2[65]);
-    const obj = objArray.push(Object.values(object1[1]));
+  //   const objArray = [];
+  //   const objEx = Object.values(object1[1]);
+  //   console.log(objEx);   //It allows to open one array to access the object content of 4.
+  //   console.log(objEx[3]);
+  //   const objEx2 = objEx[3];
+  //   console.log(objEx2[65]);
+  //   const obj = objArray.push(Object.values(object1[1]));
     
-    console.log(obj);
-    console.log(obj[2]);
-    console.log(objArray);  //It allows to open an array then another array to access object content of 4.
-    const objArray2 = [];
-    const obj2 = objArray2.push(Object.values(janes2));
-    console.log(obj2);
-    console.log(objArray2);    
-    // console.log(jane2);
+  //   console.log(obj);
+  //   console.log(obj[2]);
+  //   console.log(objArray);  //It allows to open an array then another array to access object content of 4.
+  //   const objArray2 = [];
+  //   const obj2 = objArray2.push(Object.values(janes2));
+  //   console.log(obj2);
+  //   console.log(objArray2);    
+  //   // console.log(jane2);
     
 
 
-    for (const [key, value] of Object.entries(object1)) {
-      console.log(`${key}: ${value}`);
-    }
+  //   for (const [key, value] of Object.entries(object1)) {
+  //     console.log(`${key}: ${value}`);
+  //   }
 
 
     // const month = minus1;
@@ -122,6 +123,8 @@ labelDate.addEventListener('click', btn1);
     console.log(inputValue);
     const date1Value = parseInt(date1, 10);
     console.log(date1Value);
+    const date1Vminus = date1Value - 1;
+    console.log(date1Vminus);
 
     const yearOnly = inputValue.substr(0, 4);  // grabbing only the 4 digit year from the input date.
     const yearOnlyNum = parseInt(yearOnly, 10);   // converting the input year string to number.the full 4 digits of the year "2020".
@@ -159,66 +162,72 @@ labelDate.addEventListener('click', btn1);
         return foo2;
       }
       
-    span.innerHTML = may[1];
+    // span.innerHTML = may[1];
 
 
-    bigB[0].forEach(function(item1, index1, array1){
-      console.log(index1);
-      console.log(monthVminus1);
-      while (index1 === monthVminus1) {
-        var mo = sep;
-        var setup = mo[date1Value]; 
+
+    
+
+
+
+
+    // bigB[0].forEach(function(item1, index1, array1){
+    //   console.log(index1);
+    //   console.log(monthVminus1);
+    //   while (index1 === monthVminus1) {
+    //     var mo = sep;
+    //     var setup = mo[date1Value]; 
         
-        console.log(monthVminus1);
-        console.log(monthVminus1, index1, range(setup, setup));
+    //     console.log(monthVminus1);
+    //     console.log(monthVminus1, index1, range(setup, setup));
 
-        // item1.forEach(function(item2, index2, array2) {
-        //   while (index2 === date1Value) {
-        //     console.log(index2);
-        //   }
-        // })
+    //     // item1.forEach(function(item2, index2, array2) {
+    //     //   while (index2 === date1Value) {
+    //     //     console.log(index2);
+    //     //   }
+    //     // })
 
-        // for (let i = 0 ; i <= item1.lenght ; i++) {
-        //   console.log(item1[i]);
-        // }
+    //     // for (let i = 0 ; i <= item1.lenght ; i++) {
+    //     //   console.log(item1[i]);
+    //     // }
 
-        // console.log(item1);
-        // console.log(array1);
-        // range(item1, item1);
-        // range(minus1);
-        // console.log(minus1[date1Value]);
-        break;
-      }
-    })
+    //     // console.log(item1);
+    //     // console.log(array1);
+    //     // range(item1, item1);
+    //     // range(minus1);
+    //     // console.log(minus1[date1Value]);
+    //     break;
+    //   }
+    // })
 
-    bigB[1].forEach(function(item1, index1, array1){
-      console.log(index1);
-      console.log(monthVminus1);
-      while (index1 === monthVminus1) {
-        var mo = jan;
-        var setup = mo[date1Value]; 
+    // bigB[1].forEach(function(item1, index1, array1){
+    //   console.log(index1);
+    //   console.log(monthVminus1);
+    //   while (index1 === monthVminus1) {
+    //     var mo = jan;
+    //     var setup = mo[date1Value]; 
         
-        console.log(monthVminus1);
-        console.log(monthVminus1, index1, range(setup, setup));
+    //     console.log(monthVminus1);
+    //     console.log(monthVminus1, index1, range(setup, setup));
 
-        // item1.forEach(function(item2, index2, array2) {
-        //   while (index2 === date1Value) {
-        //     console.log(index2);
-        //   }
-        // })
+    //     // item1.forEach(function(item2, index2, array2) {
+    //     //   while (index2 === date1Value) {
+    //     //     console.log(index2);
+    //     //   }
+    //     // })
 
-        // for (let i = 0 ; i <= item1.lenght ; i++) {
-        //   console.log(item1[i]);
-        // }
+    //     // for (let i = 0 ; i <= item1.lenght ; i++) {
+    //     //   console.log(item1[i]);
+    //     // }
 
-        // console.log(item1);
-        // console.log(array1);
-        // range(item1, item1);
-        // range(minus1);
-        // console.log(minus1[date1Value]);
-        break;
-      }
-    })
+    //     // console.log(item1);
+    //     // console.log(array1);
+    //     // range(item1, item1);
+    //     // range(minus1);
+    //     // console.log(minus1[date1Value]);
+    //     break;
+    //   }
+    // })
 
 
     function leap() {
@@ -226,13 +235,27 @@ labelDate.addEventListener('click', btn1);
       console.log(date1Value);
       // console.log(minus1);
 
+      const arrDn = Object.values(jdly[monthVminus1]);
+      console.log(arrDn);
+      const arrDp = Object.values(arrDn[0]);
+      console.log(arrDp);
+      const arrDp2 = arrDp[date1Value];
+      console.log(arrDp2);
     }
+
     function noleap() {
       console.log("NOOOO  Leap Year.")
+      const arrBn = Object.values(jd[monthVminus1]);
+      console.log(arrBn);
+      const arrBp = Object.values(arrBn[0]);
+      console.log(arrBp);
+      const arrBp2 = arrBp[date1Value];
+      console.log(arrBp2);
+
       // cool();
       // console.log(minus1);
-      console.log(monthValue);    
-      console.log(date1Value);
+      // console.log(monthValue);    
+      // console.log(date1Value);
       // bigB[1].forEach(function(item3, index3, array3){  //forEach to compare index from bigD to the monthvalue
         // console.log(index3);
         // console.log(monthValue);
